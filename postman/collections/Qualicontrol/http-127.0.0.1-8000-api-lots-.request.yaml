@@ -1,0 +1,29 @@
+$kind: http-request
+name: http://127.0.0.1:8000/api/lots/
+description: ""
+url: http://127.0.0.1:8000/api/lots/
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"lot_code\": \"LOT-2026-001\",\r
+
+    \  \"raw_material\": 1,\r
+
+    \  \"supplier\": 1,\r
+
+    \  \"quantity\": \"500.00\",\r
+
+    \  \"received_date\": \"2026-10-09\",\r
+
+    \  \"expiry_date\": \"2027-04-09\"\r
+
+    }"
+settings:
+  protocolVersion: auto
+  strictSSL: false
+  followRedirects: true
+  disableCookies: false
+  maxResponseSize: 52428800
+order: 4500904143112793

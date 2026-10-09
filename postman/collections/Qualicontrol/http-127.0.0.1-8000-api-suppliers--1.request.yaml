@@ -1,0 +1,15 @@
+$kind: http-request
+name: http://127.0.0.1:8000/api/suppliers/
+description: ""
+url: http://127.0.0.1:8000/api/suppliers/
+method: POST
+body:
+  type: json
+  content: '{ "name": "Cevital", "country": "Algeria", "contact_email": "contact@cevital.com" }'
+settings:
+  protocolVersion: auto
+  strictSSL: false
+  followRedirects: true
+  disableCookies: false
+  maxResponseSize: 52428800
+order: 4158201706791514

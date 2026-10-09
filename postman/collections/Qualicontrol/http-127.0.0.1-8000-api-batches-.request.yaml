@@ -1,0 +1,19 @@
+$kind: http-request
+name: http://127.0.0.1:8000/api/batches/
+description: ""
+url: http://127.0.0.1:8000/api/batches/
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"batch_code\": \"B-2026-001\",\r
+
+    \  \"product_name\": \"Biscuit\",\r
+
+    \  \"production_date\": \"2026-10-10\",\r
+
+    \  \"lots\": [1]\r
+
+    }"
+order: 1791574658550
