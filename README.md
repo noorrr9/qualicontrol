@@ -1,7 +1,5 @@
 # QualiControl
 
-# QualiControl
-
 Food quality control and traceability system. Backend API built with Django, Django REST Framework and PostgreSQL.
 
 ## Features
