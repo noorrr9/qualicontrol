@@ -1,0 +1,8 @@
+$kind: http-request
+name: New Request
+url: http://127.0.0.1:8000/api/control-limits/
+method: POST
+body:
+  type: json
+  content: '{ "parameter": "Pasteurisation temperature", "unit": "C", "min_value": "72.000" }'
+order: 4500904143117793

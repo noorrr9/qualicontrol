@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://127.0.0.1:8000/api/ccps/
+method: POST
+body:
+  type: json
+  content: '{ "name": "Pasteurisation", "hazard": "Pathogenic bacteria survival", "critical_limit": 1 }'
+order: 4500904143116793

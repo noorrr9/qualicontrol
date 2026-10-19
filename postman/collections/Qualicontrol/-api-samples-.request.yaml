@@ -1,0 +1,8 @@
+$kind: http-request
+name: /api/samples/
+url: http://127.0.0.1:8000/api/samples/
+method: POST
+body:
+  type: json
+  content: '{ "sample_code": "S-001", "batch": 1, "sampled_at": "2026-10-10T09:00:00Z", "sampled_by": "Lab tech" }'
+order: 4500904143113793

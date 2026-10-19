@@ -1,4 +1,7 @@
 $kind: http-request
-url: ""
-method: GET
-order: 1260999163852533
+url: http://127.0.0.1:8000/api/measurements/
+method: POST
+body:
+  type: json
+  content: '{ "sample": 1, "control_limit": 1, "value": "8.200" }'
+order: 4500904143115793
