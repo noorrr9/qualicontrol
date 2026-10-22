@@ -1,25 +1,44 @@
 # QualiControl
 
-Food quality control and traceability system. Backend API built with Django, Django REST Framework and PostgreSQL.
+REST API for food quality control and batch traceability, built with Django REST Framework and PostgreSQL.
 
-## Features
+## Stack
 
-- Supplier management (list and create) through a REST API
-- PostgreSQL database
-- Planned: raw materials, lots, batches, samples, measurements, CCP monitoring, corrective actions, audit log
+Python 3.13 · Django · Django REST Framework · PostgreSQL
 
-## Tech stack
+## Quick start
 
-- Python 
-- Django + Django REST Framework
-- PostgreSQL
-
-## Project structure
-
+```powershell
+git clone https://github.com/noorrr9/qualicontrol.git
+cd qualicontrol
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+copy .env.example .env
+python manage.py migrate
+python manage.py runserver
 ```
-config/          Django settings and main routing
-traceability/    Suppliers app (models, serializers, views, urls)
-postman/         Postman collection
-requirements.txt Python dependencies
-.env.example     Template for environment variables
-```
+
+Create the `qualicontrol` database in PostgreSQL first, and set your password in `.env`.
+
+API: `http://127.0.0.1:8000/api/` · Admin: `http://127.0.0.1:8000/admin/`
+
+## Endpoints
+
+Every resource supports full CRUD (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`).
+
+| Module | Resources |
+|--------|-----------|
+| Traceability | `/suppliers/` `/raw-materials/` `/lots/` `/batches/` |
+| Quality | `/control-limits/` `/samples/` `/measurements/` `/ccps/` `/ccp-monitorings/` `/corrective-actions/` |
+
+Reports:
+
+- `GET /batches/<id>/trace/`: lots, suppliers, samples, measurements and CCP checks for a batch, with a conformity summary
+- `GET /lots/<id>/trace/`: recall lookup, all batches that used a lot
+
+Measurements and CCP readings are checked against their control limits automatically.
+
+## API testing
+
+Import the Postman collection from [`postman/`](postman/).
