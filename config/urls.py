@@ -21,4 +21,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("traceability.urls")),
     path("api/", include("quality.urls")),
+    path("api/", include("audit.urls")),
 ]

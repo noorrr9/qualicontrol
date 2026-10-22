@@ -30,7 +30,7 @@ Every resource supports full CRUD (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`).
 | Module | Resources |
 |--------|-----------|
 | Traceability | `/suppliers/` `/raw-materials/` `/lots/` `/batches/` |
-| Quality | `/control-limits/` `/samples/` `/measurements/` `/ccps/` `/ccp-monitorings/` `/corrective-actions/` |
+| Quality | `/control-limits/` `/samples/` `/measurements/` `/ccps/` `/ccp-monitorings/` `/corrective-actions/` | | Audit | `/audit-logs/`
 
 Reports:
 

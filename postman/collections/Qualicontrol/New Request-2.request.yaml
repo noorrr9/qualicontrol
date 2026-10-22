@@ -1,5 +1,8 @@
 $kind: http-request
 name: New Request
-url: ""
-method: GET
+url: http://127.0.0.1:8000/api/corrective-actions/
+method: POST
+body:
+  type: json
+  content: '{ "monitoring": 1, "description": "Reprocess batch at 74 C for 15 s", "action_date": "2026-10-10", "status": "open" }'
 order: 4500904143119793
